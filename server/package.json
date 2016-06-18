@@ -17,7 +17,9 @@
     "sequelize": "^3.23.3"
   },
   "devDependencies": {
+    "chai": "3.5.0",
     "gulp": "3.9.1",
-    "gulp-webserver": "0.9.1"
+    "gulp-webserver": "0.9.1",
+    "supertest": "1.2.0"
   }
 }

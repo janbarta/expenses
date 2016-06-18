@@ -19,8 +19,8 @@ epilogue.initialize({
 
 // Create REST resource
 var categoryResource = epilogue.resource({
-    model: models.sequelize.import('./models/accountItem'),
-    endpoints: ['/categories', '/categoriesconst/:id']
+    model: models.sequelize.import('./models/category'),
+    endpoints: ['/categories', '/categories/:id']
 });
 
 models.sequelize.sync().then(function () {
