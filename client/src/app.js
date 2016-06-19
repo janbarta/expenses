@@ -1,4 +1,4 @@
-angular.module('expense-client', ['ui.router'])
+angular.module('expense-client', ['ui.router', 'ngResource', 'ngRoute'])
 
 
     .config(function($stateProvider, $urlRouterProvider) {

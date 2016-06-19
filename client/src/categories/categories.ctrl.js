@@ -1,11 +1,12 @@
 angular.module('expense-client')
 
-.controller('CategoriesController', function() {
-    this.categories = [
-        {
-            name: 'Test'
-        }, {
-            name: 'Test 2'
-        }
-    ];
+.controller('CategoriesController', function(CategoriesService) {
+
+    this.categories = [];
+
+    var self = this;
+
+    CategoriesService.get(function(res) {
+        self.categories = res;
+    });
 });

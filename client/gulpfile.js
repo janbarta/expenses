@@ -5,7 +5,12 @@ gulp.task('webserver', function() {
   gulp.src(['', 'src'])
     .pipe(webserver({
       livereload: true,
-      open: true
+      open: false,
+      proxies: [
+        {
+          source: '/api', target: 'http://localhost:3000'
+        }
+      ]
     }));
 });
 
