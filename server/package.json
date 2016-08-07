@@ -2,9 +2,11 @@
   "name": "expenses-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "npm run test-api",
+    "test-api": "node_modules/.bin/mocha --recursive --ui bdd specs/api"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,7 @@
   "devDependencies": {
     "chai": "3.5.0",
     "gulp": "3.9.1",
+    "mocha": "3.0.1",
     "supertest": "1.2.0"
   }
 }
